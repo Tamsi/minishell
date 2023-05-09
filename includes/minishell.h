@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbesson <tbesson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rania <rania@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 17:51:08 by tbesson           #+#    #+#             */
-/*   Updated: 2022/12/08 18:14:00 by tbesson          ###   ########.fr       */
+/*   Updated: 2023/05/09 17:11:30 by rania            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@
 #include "libft.h"
 #include <limits.h>
 
-int		int_error_msg(char *str);
-void	*pointer_error_msg(char *str);
-void	prompt(char *cwd);
+typedef struct t_command
+{
+	char **command;
+} s_command;
+
+s_command	*check_pipe(char *s, s_command *command);
+int			int_error_msg(char *str);
+void		*pointer_error_msg(char *str);
+void		prompt(char *cwd);
 
 #endif //_MINISHELL_H_

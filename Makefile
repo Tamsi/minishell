@@ -3,16 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tbesson <tbesson@student.42.fr>            +#+  +:+       +#+         #
+#    By: rania <rania@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 19:29:13 by tbesson           #+#    #+#              #
-#    Updated: 2022/12/08 18:11:16 by tbesson          ###   ########.fr        #
+#    Updated: 2023/05/09 16:59:02 by rania            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS_DIR	= sources
 SRCS_NAME	= main.c	\
-				utils.c
+				utils.c	\
+				check_pipe.c
 OBJS_DIR	= objs
 OBJS_NAME	= ${SRCS_NAME:.c=.o}
 SRCS		= $(addprefix $(SRCS_DIR)/,$(SRCS_NAME))
